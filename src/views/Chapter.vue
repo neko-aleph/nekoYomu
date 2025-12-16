@@ -50,6 +50,7 @@ onMounted(async () => {
     <NextChapterButton v-if="nextChapterId" :nextId="nextChapterId" />
     <div class="gap" v-else></div>
     <FooterNotice class="notice"/>
+    <div class="gap"></div>
   </div>
 </template>
 
