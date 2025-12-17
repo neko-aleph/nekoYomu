@@ -62,7 +62,9 @@ watch(provider, async (newProvider) => {
             v-for="chapter in chapters"
             :key="chapter.id"
             :id="chapter.id"
-            :number="chapter.chapterNumber || chapter.chapter || 'Unknown'" :provider="provider" :chapters="chapters"
+            :provider="provider"
+            :chapters="chapters"
+            :number="chapter.chapterNumber || chapter.chapter || null"
             :title="chapter.title"
           />
         </div>
@@ -78,10 +80,13 @@ watch(provider, async (newProvider) => {
     <ProviderSelect v-model="provider" :providers="providers" />
     <div v-if="chapters.length" class="chapters">
       <Chapter
-        v-for="chapter in chapters"
-        :key="chapter.id"
-        :id="chapter.id" 
-        :number="chapter.chapterNumber || chapter.chapter || Number(chapter.title?.substring(3)) || 'Unknown'" :provider="provider" :chapters="chapters" 
+          v-for="chapter in chapters"
+          :key="chapter.id"
+          :id="chapter.id"
+          :provider="provider"
+          :chapters="chapters"
+          :number="chapter.chapterNumber || chapter.chapter || null"
+          :title="chapter.title"
       />
     </div>
     <Empty v-else />

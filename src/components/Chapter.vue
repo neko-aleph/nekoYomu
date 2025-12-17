@@ -20,7 +20,12 @@ function goToChapter() {
 
 <template>
   <div class="chapter" @click="goToChapter">
-    <span class="text">{{ title ? title : `Ch. ${number}`}}</span>
+    <span class="text">{{
+      number && title ? `Ch. ${number} - ${title}`
+        : title ? title
+        : number ? `Ch. ${number}`
+        : "Ch. unknown"
+    }}</span>
     <div class="after">
       <span class="material-symbols-outlined">arrow_forward</span>
     </div>
