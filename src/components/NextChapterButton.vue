@@ -34,7 +34,7 @@ button {
   background-color: var(--neko-theme-button-color);
   color: var(--neko-theme-button-text-color);
   font-size: 16px;
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Geist", sans-serif;
   font-weight: 600;
   cursor: pointer;
 }
