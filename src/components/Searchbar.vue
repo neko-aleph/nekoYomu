@@ -32,5 +32,12 @@ input {
   outline: none;
   box-sizing: border-box;
   border: 1px solid var(--neko-theme-quinary-bg-color);
+  transition: padding .25s ease-in-out, border .25s ease-in-out, box-shadow .25s ease-in-out;
+}
+
+input:focus {
+  padding: 14px;
+  border: 2px solid var(--neko-theme-button-color);
+  box-shadow: 0 0 10px var(--neko-theme-shadow-color);
 }
 </style>
