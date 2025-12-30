@@ -6,6 +6,7 @@
   --neko-theme-button-color: #181818;
   --neko-theme-button-text-color: #ffffff;
   --neko-theme-secondary-bg-color: #eeeeee;
+  --neko-theme-tertiary-bg-color: #dddddd;
   --neko-theme-quaternary-bg-color: #cccccc;
   --neko-theme-quinary-bg-color: #bbbbbb;
   --neko-theme-hint-color: #545454;
@@ -19,6 +20,7 @@
     --neko-theme-button-color: #ffffff;
     --neko-theme-button-text-color: #181818;
     --neko-theme-secondary-bg-color: #222222;
+    --neko-theme-tertiary-bg-color: #363636;
     --neko-theme-quaternary-bg-color: #444444;
     --neko-theme-quinary-bg-color: #545454;
     --neko-theme-hint-color: #bbbbbb;

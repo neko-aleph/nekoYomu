@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import KeyCapIcon from "./KeyCapIcon.vue";
 
 const router = useRouter();
 const route = useRoute();
@@ -34,7 +35,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <input ref="inputRef" v-model="query" type="text" placeholder="..." @keyup.enter="search">
+  <div class="wrapper">
+    <input ref="inputRef" v-model="query" type="text" placeholder="..." @keyup.enter="search()">
+    <KeyCapIcon class="icon">/</KeyCapIcon>
+  </div>
 </template>
 
 <style scoped>
@@ -48,6 +52,7 @@ input {
   background-color: var(--neko-theme-secondary-bg-color);
   color: var(--neko-theme-text-color);
   padding: 15px;
+  padding-right: 44px;
   text-transform: capitalize;
   outline: none;
   box-sizing: border-box;
@@ -57,7 +62,19 @@ input {
 
 input:focus {
   padding: 14px;
+  padding-right: 43px;
   border: 2px solid var(--neko-theme-button-color);
   box-shadow: 0 0 10px var(--neko-theme-shadow-color);
+}
+
+.wrapper {
+  position: relative;
+  width: 310px;
+}
+
+.icon {
+  position: absolute;
+  top: 13px;
+  right: 15px;
 }
 </style>
