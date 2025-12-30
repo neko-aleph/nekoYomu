@@ -29,8 +29,8 @@ input {
   color: var(--neko-theme-text-color);
   padding: 15px;
   text-transform: capitalize;
-  border: none;
   outline: none;
   box-sizing: border-box;
+  border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 </style>

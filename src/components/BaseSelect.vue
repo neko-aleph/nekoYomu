@@ -25,7 +25,6 @@ select {
   padding: 15px 45px 15px 15px;
   box-sizing: border-box;
   border-radius: 12px;
-  border: none;
   outline: none;
   font-size: 16px;
   background: var(--neko-theme-secondary-bg-color);
@@ -34,6 +33,7 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 
 .dropdown-icon {

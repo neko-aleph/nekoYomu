@@ -27,7 +27,6 @@ const router = useRouter();
 button {
   height: 50px;
   border-radius: 12px;
-  border: none;
   padding: 14px;
   box-sizing: border-box;
   width: 310px;
@@ -37,6 +36,7 @@ button {
   font-family: "Geist", sans-serif;
   font-weight: 600;
   cursor: pointer;
+  border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 
 

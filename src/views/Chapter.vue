@@ -42,11 +42,13 @@ onMounted(async () => {
       <Header />
       <ChapterControls :title="title" :chapters="chapters" />
     </div>
-    <Page 
-      v-for="page in pages" 
-      :key="page.img" 
-      :image="page.headerForImage ? `${proxy}/${ btoa(`${page.img}|${page.headerForImage.Referer}`)}` : `${otherProxy}/?url=${page.img}`"
-    />
+    <div class="pages" v-if="pages.length">
+      <Page
+        v-for="page in pages"
+        :key="page.img"
+        :image="page.headerForImage ? `${proxy}/${ btoa(`${page.img}|${page.headerForImage.Referer}`)}` : `${otherProxy}/?url=${page.img}`"
+      />
+    </div>
     <NextChapterButton v-if="nextChapterId" :nextId="nextChapterId" />
     <div class="gap" v-else></div>
     <FooterNotice class="notice"/>
@@ -73,5 +75,17 @@ onMounted(async () => {
   align-items: center;
   flex-direction: column;
   gap: 40px;
+}
+
+.pages {
+  width: 100%;
+  max-width: 620px;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 </style>
