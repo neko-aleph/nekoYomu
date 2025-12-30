@@ -29,8 +29,8 @@ defineProps({
 
 @media screen and (min-width: 1210px) {
   .cover {
-    width: 162px;
-    height: 240px;
+    width: 180px;
+    height: 265px;
   }
 
   .center {
