@@ -35,6 +35,7 @@ img {
   border-radius: 12px;
   width: 210px;
   height: 310px;
+  box-sizing: border-box;
   border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 

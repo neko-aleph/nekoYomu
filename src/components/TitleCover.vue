@@ -22,6 +22,7 @@ defineProps({
   height: 400px;
   border-radius: 12px;
   object-fit: cover;
+  box-sizing: border-box;
   background-color: var(--neko-theme-secondary-bg-color);
   border: 1px solid var(--neko-theme-quinary-bg-color);
 }
