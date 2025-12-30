@@ -2,8 +2,8 @@ import axios from "axios";
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 
-export async function search(query, page, per_page) {
-  const res = await axios.get(`${BASE_URL}/meta/anilist-manga/${encodeURIComponent(query)}?page=${page}&per_page=${per_page}`);
+export async function search(query, page, perPage) {
+  const res = await axios.get(`${BASE_URL}/meta/anilist-manga/${encodeURIComponent(query)}?page=${page}&per_page=${perPage}`);
   return res.data;
 }
 
