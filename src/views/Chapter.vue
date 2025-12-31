@@ -8,6 +8,7 @@ import Header from "../components/Header.vue";
 import NextChapterButton from "../components/NextChapterButton.vue";
 import FooterNotice from "../components/FooterNotice.vue";
 import Page from "../components/Page.vue";
+import ReturnToTitleButton from "../components/ReturnToTitleButton.vue";
 
 const proxy = import.meta.env.VITE_CORS_PROXY_URL;
 const otherProxy = import.meta.env.VITE_OTHER_CORS_PROXY_URL;
@@ -50,7 +51,8 @@ onMounted(async () => {
       />
     </div>
     <NextChapterButton v-if="nextChapterId" :nextId="nextChapterId" />
-    <div class="gap" v-else></div>
+    <ReturnToTitleButton v-else-if="pages.length" />
+    <div class="gap" v-else />
     <FooterNotice class="notice"/>
     <div class="gap"></div>
   </div>
@@ -83,7 +85,7 @@ onMounted(async () => {
   min-height: 620px;
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 0;
   justify-content: center;
   align-items: flex-start;
   border: 1px solid var(--neko-theme-quinary-bg-color);

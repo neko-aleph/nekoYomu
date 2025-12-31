@@ -2,15 +2,11 @@
 import { useRoute } from "vue-router";
 import BaseNavigationButton from "./BaseNavigationButton.vue";
 
-defineProps({
-  nextId: String,
-});
-
 const route = useRoute();
 </script>
 
 <template>
-  <BaseNavigationButton :target="`/title/${route.params.titleId}/${route.params.provider}/chapter/${encodeURIComponent(nextId)}`">
-    Next chapter
+  <BaseNavigationButton :target="`/title/${route.params.titleId}/`">
+    Return to title
   </BaseNavigationButton>
 </template>
