@@ -53,6 +53,14 @@ function goToChapter() {
   }
 }
 
+.text {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 20px;
+}
+
 .after {
   color: var(--neko-theme-text-color);
   display: flex;
