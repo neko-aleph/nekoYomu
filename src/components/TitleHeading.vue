@@ -13,4 +13,10 @@ h1 {
   text-align: center;
   margin: 0;
 }
+
+@media screen and (min-width: 1210px) {
+  h1 {
+    text-align: left;
+  }
+}
 </style>
