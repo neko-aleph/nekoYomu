@@ -45,6 +45,11 @@ function goToChapter() {
   justify-content: space-between;
   cursor: pointer;
   border: 1px solid var(--neko-theme-quinary-bg-color);
+  transition: background-color 0.25s ease-in-out;
+}
+
+.chapter:hover {
+  background-color: var(--neko-theme-tertiary-bg-color);
 }
 
 @media screen and (min-width: 1210px) {
